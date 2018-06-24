@@ -70,12 +70,12 @@ var UserSchema = new Schema({
 // Define the following custom instance methods here
 
 // 1. setFullName: sets the current user's `fullName` property to their lastName appended to their `firstName`
-UserSchema.methods.setFullName = () => {
+UserSchema.methods.setFullName = function() {
   this.fullName = this.firstName + ' ' + this.lastName;
   return this.fullName;
 };
 // 2. lastUpdatedDate: sets the current user's `lastUpdated` property to Date.now()
-UserSchema.methods.getLastUpdated = () => {
+UserSchema.methods.getLastUpdated = function() {
   this.lastUpdated = Date.now();
   return this.lastUpdated;
 };
