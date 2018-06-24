@@ -75,7 +75,7 @@ UserSchema.methods.setFullName = () => {
   return this.fullName;
 };
 // 2. lastUpdatedDate: sets the current user's `lastUpdated` property to Date.now()
-UserSchema.methods.lastUpdated = () => {
+UserSchema.methods.getLastUpdated = () => {
   this.lastUpdated = Date.now();
   return this.lastUpdated;
 };
